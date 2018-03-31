@@ -1,0 +1,36 @@
+<html>
+<head><title></title></head>
+<script type="text/javascript">
+
+function validateForm(){
+var name=document.MyForm.uname.value;
+var password=document.MyForm.pass.value;
+
+if(name==null || name=="")
+{
+	alert("Please enter User name");
+	return false;
+}
+if(password=="")
+{
+	alert("Please enter pasword")
+	return false;
+}
+
+if(name=="Admin" && password=="12345")
+{
+	window.location.replace("C:/Users/Yunus/Desktop/JAss/Home.html");
+}
+}
+	
+</script>
+<body>
+<form method="post" action="" name="MyForm" onsubmit="return validateForm()">
+<span>User Name</span>
+<input type="text" name="uname"></br>
+<span>Password</span>
+<input type="password" name="pass"></br>
+<input type="Submit" value="Submit">
+</form>
+</body>
+</html>
